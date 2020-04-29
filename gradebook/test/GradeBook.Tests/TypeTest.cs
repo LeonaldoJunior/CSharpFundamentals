@@ -5,8 +5,22 @@ namespace GradeBook.Tests
 {
     public class TypeTest
     {
+
         [Fact]
-        public void Test1()
+        public void ValueTypeAlsoPassByRef()
+        {
+            var x = GetInt();
+            SetIntRef(ref x);
+
+            Assert.Equal(42, x);
+        }
+
+        private void SetIntRef(ref int x)
+        {
+            x = 42;
+        }
+        [Fact]
+        public void ValueTypeAlsoPassByValue()
         {
             var x = GetInt();
             SetInt(x);
@@ -14,12 +28,12 @@ namespace GradeBook.Tests
             Assert.Equal(3, x);
         }
 
-        private void SetInt(object x)
+        private void SetInt(int x)
         {
             x = 42;
         }
 
-        private object GetInt()
+        private int GetInt()
         {
             return 3;
         }
