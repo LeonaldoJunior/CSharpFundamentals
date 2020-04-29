@@ -4,11 +4,13 @@ namespace GradeBook
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[]  args)
         {
             
-            // Console.WriteLine("Hello " + args[0] + "!!");
-            
+            var numbers = new double[3];
+            numbers[0] = 12.7;
+
+                        
             if(args.Length > 0)
             {
                 Console.WriteLine($"Hello, {args[0]}!"); 
