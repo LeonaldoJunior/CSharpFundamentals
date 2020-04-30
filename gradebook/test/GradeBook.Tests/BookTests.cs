@@ -18,6 +18,7 @@ namespace GradeBook.Tests
             expected.Average = 85.6;
             expected.Low     = 77.3;
             expected.High    = 90.5;
+            expected.Letter  = 'B';
             //-- Act
             var actual = book.GetStatistics();
 
@@ -25,6 +26,7 @@ namespace GradeBook.Tests
             Assert.Equal(expected.Average, actual.Average, 1);
             Assert.Equal(expected.Low, actual.Low);
             Assert.Equal(expected.High, actual.High);
+            Assert.Equal(expected.Letter, actual.Letter);
 
         }
     }
